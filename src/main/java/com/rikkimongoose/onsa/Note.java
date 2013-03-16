@@ -1,9 +1,10 @@
 package com.rikkimongoose.onsa;
 
 public class Note {
-	public Note(String title)
+	public Note(String title, double pitch)
 	{
 		Title = title;
+		Pitch = pitch;
 	}
 	
 	public String getTitle()
@@ -15,7 +16,6 @@ public class Note {
 	{
 		return Pitch;
 	}
-	
 	private String Title;
 	private double Pitch;
 }

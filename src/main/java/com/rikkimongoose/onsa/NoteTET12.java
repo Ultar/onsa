@@ -3,13 +3,12 @@ package com.rikkimongoose.onsa;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NoteTET12 implements INote{
+public class NoteTET12 extends Note{
 	private static List<NoteTET12> items = new ArrayList<NoteTET12>();
 	
 	private NoteTET12(String title, double pitch)
 	{
-		Title = title;
-		Pitch = pitch;
+		super(title, pitch);
 		items.add(this);
 	}
 	
@@ -37,18 +36,8 @@ public class NoteTET12 implements INote{
 	public static NoteTET12 getElement(String title)
 	{
 		for(NoteTET12 element : items)
-			if(element.getTitle() == title)
+			if(element.getTitle().equals(title))
 				return element;
 		return null;
 	}
-	
-	public String getTitle() {
-		return Title;
-	}
-
-	public double getPitch() {
-		return Pitch;
-	}
-	private String Title;
-	private double Pitch;
 }
